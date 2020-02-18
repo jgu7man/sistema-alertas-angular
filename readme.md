@@ -14,6 +14,20 @@ Un mini sistema de alertas que se pueden invocar desde cualquier componente en u
 ### Instalación de todos los paquetes
 `npm i jQuery materialize @types/jquery @types/materialize-css --save`
 
+
+### CDN's
+
+```html
+<!-- FONTAWESOME -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" />
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<!-- MATERIALIZE -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+```
+
+
 ### Instalación del componente
 
 1. Copiar y pegar la carpeta en el area de componentes del proyecto
