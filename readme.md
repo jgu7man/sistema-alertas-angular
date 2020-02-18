@@ -16,7 +16,7 @@ Antes de usar los components se debe instalar las dependencias mediante las sigu
 ### NPM
 `npm i jQuery materialize @types/jquery @types/materialize-css --save`
 
-Luego de completada la instalación de los paqutes, es necesario incluir en el `angular.json` los scripts
+Luego de completada la instalación de los paqutes, es necesario incluir en el `angular.json` los scripts y estilos
 ```json
 {
     "styles": [
@@ -36,8 +36,10 @@ Luego de completada la instalación de los paqutes, es necesario incluir en el `
 ```html
 <!-- FONTAWESOME -->
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" />
+
 <!-- jQuery -->
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
 <!-- MATERIALIZE -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
@@ -46,7 +48,7 @@ Luego de completada la instalación de los paqutes, es necesario incluir en el `
 
 ### Instalación del componente
 
-1. Copiar y pegar la carpeta en el area de componentes del proyecto
+1. Copiar y pegar la carpeta **alerta_service** en el area de componentes del proyecto
 2. Hacer el llamado del componente en el `app.module.ts`
 
 *app.module.ts*
