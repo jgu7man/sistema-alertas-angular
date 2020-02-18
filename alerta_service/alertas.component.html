@@ -1,0 +1,41 @@
+<div id="alertaWindow">
+    <div class="container">
+        <div class="pop-up grey lighten-1">
+            <div class="row">
+                <div class="col s12">
+                    <i class="fas fa-times right" (click)="onClose()"></i>
+                </div>
+            </div>
+            <ng-container *ngIf="pregunta; then Pregunta; else aviso"></ng-container>
+            <ng-template #Pregunta>
+                <div class="row">
+                    <div class="col s12 center">
+                        <p>{{pregunta.mensaje}}</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12 opciones">
+                        <div class="opcion center">
+                            <button class="btn white black-text" (click)="getResponse(true)">{{pregunta.respTrue}}</button>
+                        </div>
+                        <div class="opcion center">
+                            <button class="btn white black-text" (click)="getResponse(false)">{{pregunta.respFalse}}</button>
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+            <ng-template #aviso>
+                <div class="row">
+                    <div class="col s12 center">
+                        <p>{{alerta.mensaje}}</p>
+                    </div>
+                </div>
+
+                <div class="col s12">
+                    <button class="btn white black-text" (click)="getResponse(true)">{{alerta.confirmacion}}</button>
+                </div>
+            </ng-template>
+
+        </div>
+    </div>
+</div>
