@@ -164,3 +164,39 @@ Los botones de respuestas están configurado por default como *"aceptar"* y *"ca
     
 ```
 
+
+### ESTILOS
+
+Para modificar estilos y colores con la librería de *materialize*, puedes revisar la documentación en http://archives.materializecss.com/0.100.2/getting-started.html.
+
+#### Colores
+
+Los colores del cuadro de diálogo son fácil de editar usando la librería de *materialize* que se encuentra en http://archives.materializecss.com/0.100.2/color.html.
+
+##### Ejemplo
+*alertas.component.html*
+```html
+<!-- Por defaul el cuadro viene en gris definido por "grey lighten-1" -->
+<div class="pop-up grey lighten-1"> 
+
+        <div class="col s12">
+            <!-- "black-text" define el ícono de cerrado en negro -->
+            <i class="fas fa-times right black-text" (click)="onClose()"></i>
+        </div>
+
+        
+        <div class="row">
+            <div class="col s12 center">
+                <!-- "black-text" define el color de la fuente del mensaje en negro -->
+                <p class="black-text">{{alerta.mensaje}}</p>
+            </div>
+        </div>
+
+        <div class="col s12">
+            <!-- El color de fondo del boton se define en blanco escribiendo "white" y el texto en negro -->
+            <button class="btn white black-text" (click)="getResponse(true)">{{alerta.confirmacion}}</button>
+        </div>
+
+</div>
+```
+
