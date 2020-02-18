@@ -50,12 +50,12 @@ Invocar el servicio en el componente para mandar las alertas
 
 *cualquier.component.ts*
 ```ts
-import { AdminAlertaService } from '../../../services/admin/admin-alerta.service';
+import { AlertaService } from '/components/alerta_service/alertas.component';
 
 export class CualquierComponent implements OnInit {
 
     constructor(
-        private _alerta: AdminAlertaService
+        private _alerta: AlertaService
     ) { }
 
 }
