@@ -11,8 +11,24 @@ Un mini sistema de alertas que se pueden invocar desde cualquier componente en u
 
 ## Instalación
 
-### Instalación de todos los paquetes
+Antes de usar los components se debe instalar las dependencias mediante las siguientes opciones
+
+### NPM
 `npm i jQuery materialize @types/jquery @types/materialize-css --save`
+
+Luego de completada la instalación de los paqutes, es necesario incluir en el `angular.json` los scripts
+```json
+{
+    "styles": [
+        "node_modules/materialize-css/dist/css/materialize.css",
+
+    ],
+    "scripts": [
+        "node_modules/materialize-css/dist/js/materialize.js",
+        "node_modules/jquery/dist/jquery.js",
+    ]
+}
+```
 
 
 ### CDN's
