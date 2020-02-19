@@ -6,7 +6,7 @@
                     <i class="fas fa-times right" (click)="onClose()"></i>
                 </div>
             </div>
-            <ng-container *ngIf="pregunta; then Pregunta; else aviso"></ng-container>
+            <ng-container *ngIf="pregunta.mensaje; then Pregunta; else aviso"></ng-container>
             <ng-template #Pregunta>
                 <div class="row">
                     <div class="col s12 center">

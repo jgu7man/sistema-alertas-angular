@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AlertaService, PREGUNTA, MENSAJE } from './alertas.service';
+import { AlertaService} from './alertas.service';
+import { PreguntaAlertaModel, MensajeAlertaModel } from './alertas.model';
 
 @Component({
   selector: 'app-alertas',
@@ -8,13 +9,16 @@ import { AlertaService, PREGUNTA, MENSAJE } from './alertas.service';
 })
 export class AlertasComponent implements OnInit {
 
-  public alerta: MENSAJE
-  public pregunta: PREGUNTA
+  public alerta: MensajeAlertaModel
+  public pregunta: PreguntaAlertaModel
   
   
   constructor(
     private _alerta: AlertaService
-  ) { }
+  ) {
+    this.alerta = new MensajeAlertaModel('', '')
+    this.pregunta = new PreguntaAlertaModel('','','')
+   }
 
   ngOnInit() {
     
@@ -32,15 +36,15 @@ export class AlertasComponent implements OnInit {
 
   getResponse(res:boolean) {
     this._alerta.respuestaAlerta$.next(res)
-    this.alerta = undefined
-    this.pregunta = undefined
+    this.alerta = new MensajeAlertaModel('', '')
+    this.pregunta = new PreguntaAlertaModel('','','')
     $('#alertaWindow').fadeToggle()
   }
 
   onClose() {
     $('#alertaWindow').fadeToggle()
-    this.alerta = undefined
-    this.pregunta = undefined
+    this.alerta = new MensajeAlertaModel('', '')
+    this.pregunta = new PreguntaAlertaModel('','','')
   }
 
 }
